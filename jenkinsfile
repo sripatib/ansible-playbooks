@@ -1,4 +1,4 @@
-node (lable = slave1) {
+node {
 
     checkout scm 
     env.AWS_ACCESS_KEY_ID=AKIAI5EDLQCGORBDYSAA
