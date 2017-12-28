@@ -4,11 +4,11 @@ node {
     env.AWS_ACCESS_KEY_ID=AKIAI5EDLQCGORBDYSAA
     env.AWS_SECRET_ACCESS_KEY=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
     def filename=build.txt$NOW 
-    stage("build")
+    stage('build')
 	{
      	echo "hi, this is a test" > $filename  
 	}  
-    stage("test")
+    stage('test')
 	{
 	sh "ls build.txt"
         if (returnCode != 0 ) 
@@ -16,11 +16,11 @@ node {
 	         error("Failed to verify")
 		}
 	} 
-    stage("push")
+    stage('push')
 	{
 	sh "aws s3 cp $filename s3://qw12"
 	} 
-     stage("deploy")
+     stage('deploy')
         {
 	sh "sshpass -p root123 ssh root@10.10.5.248 | ansible-playbook /root/ansible/GCP/activemq.yml"
 	}
