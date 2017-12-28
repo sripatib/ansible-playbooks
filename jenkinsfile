@@ -6,7 +6,7 @@ node {
     def filename=build.txt$NOW 
     stage("build")
 	{
-     	sh "echo "hi, this is a test" > $filename"  
+     	echo "hi, this is a test" > $filename  
 	}  
     stage("test")
 	{
