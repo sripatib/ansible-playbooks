@@ -1,0 +1,11 @@
+imports:
+- path: vpccreation-template.jinja
+- path: firewall-template.jinja
+- path: subnetwork2-template.jinja
+- path: subnetwork1-template.jinja
+- path: customnetwork-template.jinja
+- path: http-httpsfirewall-template.jinja
+
+resources:
+- name: network-setup
+  type: customnetwork-template.jinja
