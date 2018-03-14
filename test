@@ -8,4 +8,4 @@ imports:
 
 resources:
 - name: network-setup
-  type: customnetwork-template.jinja
+  type: customnetwork-template.jinjaaaaaaaa
